@@ -3,7 +3,7 @@ html{
     height: 100%;
 }
 body {
-  background: #6699ff;
+  background: #004159;
   margin: 0;
   padding: 0;
   border: 0;
@@ -18,11 +18,11 @@ header {
     padding: 0vh;
     height: 10vh;
     width: 100%;
-    background-color: #8d77d6;
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 2.5vmin;
+    font-size: 3.5vmin;
     color: darkgray;
     display: inline-block;
+    background-color: #8d77d6;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 #TopTitle {
@@ -33,10 +33,11 @@ header {
     color: white;
     display: inline;
     font-family: 'Roboto Slab', serif;
-    font-size: 5.2vmin;
+    font-size: 5vmin;
     padding-left: 2vh;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     background-color: transparent;
+    line-height: 10vh;
 }
 /*#TopTitle:hover {
     color: #424242;
@@ -44,44 +45,45 @@ header {
 }*/
 
 @media (min-width: 600px){
-#NavBar {
-    display: inline-block;
-    float: right;
-}
+    #NavBar {
+        display: inline-block;
+        position: absolute;
+        right: 1%;
+    }
     ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    /*color: #333333;*/
-}
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        /*color: #333333;*/
+    }
 
-li {
-    float: left;
-}
+    li {
+        float: left;
+    }
 
-li a {
-    display: inline-block;
-    background-color: #8d77d6;
-    color: white;
-    text-align: center;
-    /*padding: 1vh;*/
-    height: 7vh;
-    width: 4vw;
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
-    padding-top: 3vh;
-    text-decoration: none;
-    /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    margin-left: 1vw;
-}
+    li a {
+        display: inline-block;
+        background-color: #8d77d6;
+        color: white;
+        text-align: center;
+        /*padding: 1vh;*/
+        height: 7vh;
+        width: 6vw;
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+        padding-top: 3vh;
+        text-decoration: none;
+        /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        margin-left: 1vw;
+    }
 
-li a:hover {
-    padding-top: 4vh;
-    background-color: #9E9E9E;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
+    li a:hover {
+        padding-top: 4vh;
+        background-color: #9E9E9E;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
 }
 
 @media (max-width: 599px) {
@@ -95,7 +97,7 @@ li a:hover {
     }
     #TopTitle{
         display: inline-block;
-        font-size: 30px;
+        font-size: 7vw;
         text-align: center;
         margin: auto;
         line-height: 80px;
@@ -114,7 +116,6 @@ li a:hover {
         display: inline-block;
         position: absolute;
         right: 3%;
-        
         line-height: 80px;
         font-size: 40px;
         cursor: pointer;
@@ -127,19 +128,43 @@ li a:hover {
         display: block;
         background-color: gray;
         width: 100%;
-        z-index:
+        box-shadow: inset 0 10px 20px rgba(0,0,0,0.19), inset 0 6px 6px rgba(0,0,0,0.23), 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        list-style-type: none;
+        list-style: none;
+        padding: 0;
+        text-align: center;
     }
     #NavBar ul li {
-        float: none;
+        font-size: 26px;
+        padding: 0;
+        list-style-type: none;
+        margin: 0px;
     }
+    /*#NavBar ul li + li{
+        border-top: 1px solid #333;
+    }*/
+    
+    #NavBar ul li + li:before {
+        content : "";
+        position: absolute;
+        display: inline-block;
+        margin-top: -3.6px;
+        padding: 0;
+        left    : 1%;
+        height  : 3px;
+        width   : 98%;  /* or 100px */
+        border-bottom:1px solid ;
+    }
+    
     #NavBar ul li a {
         padding: 10px 3%;
         line-height: 20px;
-        border-top: 1px solid #333;
     }
     ul li {
-      float: left;
-      list-style: none;
+        clear: left;
+        clear: right;
+        list-style: none;
+        list-style-type: none;
     }
     ul li a {
       display: block;
