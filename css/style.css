@@ -16,7 +16,7 @@ header {
     z-index: 2;
     position: fixed;
     padding: 0vh;
-    height: 10vh;
+    height: 70px;
     width: 100%;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 3.5vmin;
@@ -28,29 +28,32 @@ header {
 #TopTitle {
     top: 0px;
     margin: 0px;
-    text-transform: uppercase;
-    position: relative;
+    position: absolute;
+    left: 20px;
+    
+    height: 70px;
+    line-height: 70px;
+    
     color: white;
-    display: inline;
     font-family: 'Roboto Slab', serif;
-    font-size: 5vmin;
-    padding-left: 2vh;
+    font-size: 2.6vw;
+    text-transform: uppercase;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    background-color: transparent;
-    line-height: 10vh;
 }
-/*#TopTitle:hover {
+#TopTitle:hover {
     color: #424242;
     cursor: default;
-}*/
+}
 
 @media (min-width: 600px){
+    #MenuButton{
+        display: none;
+    }
     #NavBar {
-        display: inline-block;
         position: absolute;
         right: 1%;
     }
-    ul {
+    #NavBar ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -58,29 +61,28 @@ header {
         /*color: #333333;*/
     }
 
-    li {
+    #NavBar ul li {
         float: left;
     }
 
-    li a {
+    #NavBar ul li a {
         display: inline-block;
         background-color: #8d77d6;
         color: white;
         text-align: center;
-        /*padding: 1vh;*/
-        height: 7vh;
         width: 6vw;
+        height: 50px;
         padding-left: 1.5vw;
         padding-right: 1.5vw;
-        padding-top: 3vh;
         text-decoration: none;
-        /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+        padding-top: 16px;
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
         margin-left: 1vw;
+        font-size: 1.8vw;
     }
 
-    li a:hover {
-        padding-top: 4vh;
+    #NavBar ul li a:hover {
+        padding-top: 40px;
         background-color: #9E9E9E;
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
@@ -88,19 +90,11 @@ header {
 
 @media (max-width: 599px) {
     
-    #MenuButton{
-        background-color: antiquewhite;
-    }
     header{
-       height: 80px;
         z-index: 10;
     }
     #TopTitle{
-        display: inline-block;
         font-size: 7vw;
-        text-align: center;
-        margin: auto;
-        line-height: 80px;
     }
     /*header .container {
         width: 100%;
@@ -108,21 +102,69 @@ header {
     /*#header h1 {
         padding-left: 3%;
     }*/
-    #NavBar {
-        width: 100%;
-    }
-    #NavBar:before {
+    /*#TopTitle:after {
         content: '\2630';
         display: inline-block;
         position: absolute;
-        right: 3%;
+        right: -25vw;
         line-height: 80px;
         font-size: 40px;
         cursor: pointer;
         top: 0px;
         color: white;
         border-radius: 3px;
+    }*/
+    
+    /*#MenuButton{
+        display: inline;
+        position:relative;
+        color: white;
+        right: -18vw;
+        background-color: rgba(0,0,0,0.2);
+        border-radius: 5px;
+        font-size: 8vw;
+        width: 100px;
+        line-height: 80px;
+    }*/
+    
+    #MenuButton{
+        top: 0px;
+        margin: 0px;
+        position: absolute;
+        right: 20px;
+        text-align: center;
+
+        height: 55px;
+        width: 50px;
+        margin-top: 8px;
+
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+
+        color: white;
+        font-family: 'Roboto Slab', serif;
+        text-transform: uppercase;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     }
+    
+    #NavBar {
+        top: 70px;
+        margin-top: 0px;
+        right: 95%;
+        position: absolute;
+        width: 100%;
+        -webkit-transition: rigth 1s; /* For Safari 3.1 to 6.0 */
+        transition: right 1s;
+    }
+    
+    #NavBar:hover {
+        right: 0%;
+    }
+    
+    #NavBar ul li:hover {
+        background-color: #9E9E9E;
+    }
+    
     #NavBar ul {
         margin-top: -1px;
         display: block;
@@ -140,9 +182,6 @@ header {
         list-style-type: none;
         margin: 0px;
     }
-    /*#NavBar ul li + li{
-        border-top: 1px solid #333;
-    }*/
     
     #NavBar ul li + li:before {
         content : "";
@@ -159,21 +198,17 @@ header {
     #NavBar ul li a {
         padding: 10px 3%;
         line-height: 20px;
+        color: white;
+        text-decoration: none;
+        display: block;
     }
-    ul li {
-        clear: left;
-        clear: right;
-        list-style: none;
-        list-style-type: none;
+}
+
+@media (min-width: 1600px){
+    #TopTitle{
+        font-size: 40px;
     }
-    ul li a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 0 10px;
-    }
-    
-    ul li:hover{
-        background-color: #9E9E9E;
+    #NavBar ul li a {
+        font-size: 30px;
     }
 }
