@@ -41,4 +41,5 @@ function resize(){
         menuMobile.style.transition = "none";
         menuButtonPosition = menuMobile.style.right = "0%";
     }
+    //randomise();
 }
