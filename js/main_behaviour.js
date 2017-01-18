@@ -29,7 +29,7 @@ function MenuButtonClick(){
             menuButtonPosition = menuMobile.style.right = "0%";
         }
     }else{
-        menuButtonPosition = menuMobile.style.right = "0%";
+        menuButtonPosition = menuMobile.style.right = "2%";
     }
 }
 
@@ -39,7 +39,7 @@ function resize(){
         menuButtonPosition = menuMobile.style.right = "100%";
     }else{
         menuMobile.style.transition = "none";
-        menuButtonPosition = menuMobile.style.right = "0%";
+        menuButtonPosition = menuMobile.style.right = "2%";
     }
     //randomise();
 }

@@ -54,15 +54,30 @@ header {
     line-height: 70px;
     
     color: white;
-    font-family: 'Roboto Slab', serif;
-    font-size: 2.6vw;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.8vw;
     text-transform: uppercase;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+   text-shadow: 1px 1px #fe4902, 
+                2px 2px #fe4902, 
+                3px 3px #fe4902;
+   -webkit-transition: all 0.12s ease-out;
+   -moz-transition:    all 0.12s ease-out;
+   -ms-transition:     all 0.12s ease-out;
+   -o-transition:      all 0.12s ease-out;
 }
 
 #TopTitle:hover {
-    color: #3C3B5C;
+    /*color: #3C3B5C;*/
+    color: #FFB563;
     cursor: default;
+   top: -3px; 
+   left: 17px; 
+   text-shadow: 1px 1px #fe4902, 
+                2px 2px #fe4902, 
+                3px 3px #fe4902, 
+                4px 4px #fe4902, 
+                5px 5px #fe4902, 
+                6px 6px #fe4902;
 }
 			
 .starfield {
@@ -77,8 +92,78 @@ header {
 }
 
 #main{
+    padding-top: 80px;
+}
+
+#main{
+    padding-top: 80px;
+}
+
+/*
+
+*/
+
+h1{
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 5vw;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Anonymous Pro regular 700', monospace;
+    font-size: 3.5vw;
+    text-align: center;
+}
+
+#HomeTitle{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+#HomeTitle{
+    cursor: not-allowed;
+}
+
+#HomePhoto{
+    width: 15vmax;
+    height: 15vmax;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    border-style: outset;
+    border-width: 1vmin;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+        transition:     transform .8s ease-in-out;
+}
+#HomePhoto:hover{
+   /* -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);*/
+}
+
+#HomeCaption{
+    text-align: center;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 0.5vw;
+    color: #1d232f;
+}
+
+#HomeCaption:hover{
+    cursor: default;
+}
+
+#HomeText{
     
 }
+
+/*
+
+*/
 
 @media (min-width: 600px){
     #MenuButton{
@@ -86,7 +171,7 @@ header {
     }
     #NavBar {
         position: absolute;
-        right: 0%;
+        right: 2%;
     }
     #NavBar ul {
         list-style-type: none;

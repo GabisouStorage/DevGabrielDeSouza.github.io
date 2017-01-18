@@ -13,7 +13,7 @@ function Starfield(w,h) {
 	this.maxVelocity = 30;*/
 	this.minVelocity = Math.random()*30;
 	this.maxVelocity = Math.random()*40 + this.minVelocity;	
-	this.stars = 200;
+	this.stars = 100;
 	this.intervalId = 0;
 }
 
@@ -137,7 +137,7 @@ starfield.start();
 
 function randomise() {
 	starfield.stop();
-	starfield.stars = 200;
+	starfield.stars = 100;
 	starfield.minVelocity = Math.random()*30;
 	starfield.maxVelocity = Math.random()*40 + starfield.minVelocity;			
 	starfield.start();
