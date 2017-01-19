@@ -16,17 +16,17 @@
     <body onresize="resize()">
         <header id="header">
             <div class="container">
-                <h1 id="TopTitle">Gabriel de Souza</h1>
+                <a href="#Home"><h1 id="TopTitle">Gabriel de Souza</h1></a>
                 
                 <h1 id="MenuButton" onclick="MenuButtonClick()">☰</h1>
                 
                 <nav id="NavBar">
                     <ul>
-                        <li><a href="#Home">Home</a></li>
                         <li><a href="#About">About</a></li>
                         <li><a href="#Work">Work</a></li>
                         <li><a href="#Tools">Tools</a></li>
                         <li><a href="#Contact">Contact</a></li>
+                        <li><a id="Blog">Blog</a></li>
                     </ul>
                 </nav>
             </div>
@@ -37,8 +37,7 @@
         
         <main id="main">
             <section id="Home">
-                <!--<h1 id= "HomeTitle">Hi! My name is Gabriel de Souza.</h1>-->
-                <h1 id= "HomeTitle">Hi! I'm DevGabrielDeSouza™</h1>
+                <h1 id= "HomeTitle" class="fadeInDown">Hi! I'm DevGabrielDeSouza™</h1>
                 <img id="HomePhoto" src="img/avatar.jpg"/>
                 <figcaption id="HomeCaption">So-called as "Gabriel de Souza" and "Biel".</figcaption>
                 <h2 id="HomeText">Hello World!</h2>
@@ -46,7 +45,7 @@
         </main> 
         
         <footer id="Contact">
-            <h1>Contato</h1>
+            <h1 id="ContactTitle">Contato</h1>
             <p>Meus contatos aqui:</p>
             <ul>
                 <li>E-mail: </li>

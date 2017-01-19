@@ -83,7 +83,7 @@ Starfield.prototype.update = function() {
 
         //star.opacity += dt * star.increase;
         
-        star.opacity -= (Math.random() * dt) / 8;
+        //star.opacity -= (Math.random() * dt) / 8;
         
 		//	If the star has moved from the bottom of the screen, spawn it at the top.
 		if(star.x < 0) {
@@ -102,23 +102,24 @@ Starfield.prototype.draw = function() {
  	//ctx.fillStyle = '#000000';
 	//ctx.fillRect(0, 0, this.width, this.height);
     
-    ctx.save();
+    //ctx.save();
     
 	//Clear the canvas
 	ctx.clearRect(0, 0, this.width, this.height);
 
     
 	//	Draw stars.
-	ctx.fillStyle = '#ffffff';
+	//ctx.fillStyle = '#ffffff';
+    ctx.fillStyle = "rgba(255,255,255, 0.6)";
 	for(var i=0; i<this.stars.length;i++) {
 		var star = this.stars[i];
         
         //Apply opacity
-        ctx.globalAlpha = (star.opacity) / 1;
+        //ctx.globalAlpha = (star.opacity) / 1;
         
 		ctx.fillRect(star.x, star.y, star.size, star.size);
 	}
-    ctx.restore();
+    //ctx.restore();
 };
 
 function Star(x, y, size, velocity) {
@@ -126,8 +127,8 @@ function Star(x, y, size, velocity) {
 	this.y = y; 
 	this.size = size;
 	this.velocity = velocity;
-    this.opacity = Math.random();
-    this.increase = 0.1;
+    //this.opacity = Math.random();
+    //this.increase = 0.1;
 }
 
 var container = document.getElementById('starfield');
