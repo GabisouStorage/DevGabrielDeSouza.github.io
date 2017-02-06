@@ -57,7 +57,7 @@ header {
     
     color: white;
     font-family: 'Rubik', sans-serif;
-    font-size: 2.8vw;
+    font-size: 2.6vw;
     text-transform: uppercase;
    text-shadow: 1px 1px #fe4902, 
                 2px 2px #fe4902, 
@@ -68,18 +68,15 @@ header {
    -o-transition:      all 0.12s ease-out;
 }
 
-#TopTitle:hover {
-    /*color: #3C3B5C;*/
-    color: #FFB563;
-   top: -3px; 
-   left: 17px; 
-   text-shadow: 1px 1px #fe4902, 
-                2px 2px #fe4902, 
-                3px 3px #fe4902, 
-                4px 4px #fe4902, 
-                5px 5px #fe4902, 
-                6px 6px #fe4902;
+#NavBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    /*color: #333333;*/
 }
+
+
 			
 .starfield {
     position: absolute;
@@ -195,11 +192,19 @@ h2{
 */
 
 #About{
+    margin-top: 100px;
     display: inline-block;
     width: 100%;
     /*background-color: rgb(110, 110, 110);*/
-    color: black;
     box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23), 0 -5px 10px rgba(0,0,0,0.19), 0 -3px 3px rgba(0,0,0,0.23);
+    padding-bottom: 100px;
+    text-align: center;
+    
+    /*background: rgba(0,59,111,1);*/
+    /*background-image: url("ZenBG-1.png"), url("ZenBG-2.png");*/
+    /*background-image: url(tardis.png);*/
+    background-repeat: repeat-x, repeat-z;
+    
 }
 
 #AboutTitle{
@@ -212,9 +217,18 @@ h2{
     margin-bottom: 30px;
 }
 
+.AboutBox{
+    display: inline-block;
+    padding: 0px;
+    width: 38vw;
+    margin: 3vw;
+}
+
 .AboutText{
+    margin-top: 4%;
+    float: right;
     display:inline-block;
-    padding: 20px;
+    padding: 2vw;
     padding-top:0px;
     padding-bottom: 0px;
     
@@ -237,20 +251,10 @@ h2{
     
 }
 
-#AboutTextLeft{
-    /*-color: red;*/
-    margin-left: 2vmax;
-}
-
-#AboutTextRight{
-    /*background-color: blue;*/
-    float: right;
-    margin-top: 2vmax;
-    margin-right: 5vmax;
-}
-
 .AboutBubble{
-    margin: 1vmax;
+    /*margin: 1vmax;*/
+    cursor: crosshair;
+    float: left;
     display: inline-block;
     width: 15vmax;
     height: 15vmax;
@@ -258,13 +262,13 @@ h2{
     position: relative;
     text-align: center;
     
-    margin-right: 2vmax;
-    margin-bottom: 100px;
+    /*margin-right: 2vmax;*/
+    /*margin-bottom: 100px;*/
     
     /*animation: jump 2s infinite;*/
     transform: scale(1);
     /*transition: all 5s linear 0s;*/
-    transition: transform 5s linear 0s;
+    transition: transform 0.1s linear 0s;
 
     
     -webkit-touch-callout: none; /* iOS Safari */
@@ -275,19 +279,13 @@ h2{
         user-select: none; /* Non-prefixed version, currently
                                   not supported by any browser */
 }
-#AboutBubbleLeft{
-    margin-left: 2vw;
-}
-#AboutBubbleRight{
-    margin-left: 5vw;
-}
 
 .AboutBubble:active {
     transform: scale(0.5);
 }
 
 .AboutImage{
-    width: 12vmax;
+    width: 12vmax;/*3vmax a menos que .bubble*/
     height: 12vmax;
     z-index: 1;
     top: 1.5vmax;
@@ -333,7 +331,7 @@ h2{
     border-radius: 50%; 
 }
 
-
+/*
 @keyframes jump {
     0% {
         top: 0;
@@ -345,7 +343,7 @@ h2{
         top: 0;
     }
 }
-
+*/
 
 /*
 CRT
@@ -364,6 +362,19 @@ CRT
 */
 
 @media (min-width: 600px){
+
+    #TopTitle:hover {
+        /*color: #3C3B5C;*/
+        color: #FFB563;
+       top: -3px; 
+       left: 17px; 
+       text-shadow: 1px 1px #fe4902, 
+                    2px 2px #fe4902, 
+                    3px 3px #fe4902, 
+                    4px 4px #fe4902, 
+                    5px 5px #fe4902, 
+                    6px 6px #fe4902;
+    }
     #MenuButton{
         display: none;
     }
@@ -407,12 +418,25 @@ CRT
     }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 599.99px) {
     header{
         z-index: 10;
     }
     #TopTitle{
         font-size: 7vw;
+    }
+
+    #TopTitle:active {
+        /*color: #3C3B5C;*/
+        color: #FFB563;
+       top: -3px; 
+       left: 17px; 
+       text-shadow: 1px 1px #fe4902, 
+                    2px 2px #fe4902, 
+                    3px 3px #fe4902, 
+                    4px 4px #fe4902, 
+                    5px 5px #fe4902, 
+                    6px 6px #fe4902;
     }
     /*header .container {
         width: 100%;
@@ -528,6 +552,57 @@ CRT
         text-decoration: none;
         display: block;
     }
+    
+    
+    
+    .AboutBox{
+        display: inline-block;
+        padding: 0px;
+        width: 75vw;
+        height: 40vw;
+        margin: 3vh;
+    }
+    
+    .AboutBubble{
+        top: 5vw;
+        width: 30vw;
+        height: 30vw;
+    }
+
+
+    .AboutImage{
+        width: 24vw;/*3vmax a menos que .bubble*/
+        height: 24vw;
+        top: 2.5vw;
+    }
+
+    .bubble{
+        width:      30vw;
+        height:     30vw;  
+
+    }
+
+    .bubble::after {
+        width: 18vw; 
+        height: 8vw; 
+
+        left: 6.2vw;
+        top: 1.8vw;
+    }
+    
+    
+
+    .AboutText{
+        padding: 2vw;
+        padding-top:0px;
+        padding-bottom: 0px;
+        margin-top: 6vw;
+
+        width: 28vw;
+        font-size: 3vw;
+
+    }
+    
 }
 
 @media (min-width: 1600px){
