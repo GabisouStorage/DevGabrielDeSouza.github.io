@@ -43,3 +43,85 @@ function resize(){
     }
     //randomise();
 }
+
+var slidesNames = [["GameSlide", 0],["ArtSlide",0],["AppSlide",0]];
+
+var myIndex = 0;
+
+carousel();
+
+
+function carousel(slides) {
+    var i;
+    
+    var slide = [];
+    for(var i=0; i< slidesNames.length; i++) {
+        
+        var j;
+        
+        slide[i] = document.getElementsByClassName(slidesNames[i][0]);
+        
+        for (j = 0; j < slide[i].length; j++) {
+            slide[i][j].style.display = "none";
+            //console.log(slide[i][j]);
+        }
+        
+        slidesNames[i][1]++;
+        
+        if (slidesNames[i][1] > slide[i].length) {
+            slidesNames[i][1] = 1
+        }
+        
+        slide[i][slidesNames[i][1]-1].style.display = "block"; 
+    }
+    
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+/*
+function carousel(slides) {
+    var i;
+    
+    var slide = [];
+    for(var i=0; i< slidesNames.length; i++) {
+        
+        var j;
+        
+        slide[i] = document.getElementsByClassName(slidesNames[i]);
+        
+        for (j = 0; j < slide[i].length; j++) {
+            slide[i][j].style.display = "none";
+            //console.log(slide[i][j]);
+        }
+        
+        myIndex++;
+        
+        if (myIndex > slide[i].length) {
+            myIndex = 1
+        }
+        
+        slide[i][myIndex-1].style.display = "block"; 
+    }
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+*/
+
+/*
+function carousel(slides) {
+    var i;
+    var x = document.getElementsByClassName("GameSlide");
+    
+    var slide = [];
+    for(var i=0; i< slidesNames.length; i++) {
+        slide[i] = document.getElementsByClassName("GameSlide");
+    }
+    
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+*/

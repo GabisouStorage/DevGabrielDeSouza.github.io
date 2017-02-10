@@ -22,10 +22,10 @@
                 
                 <nav id="NavBar">
                     <ul>
-                        <li><a href="#About">About</a></li>
-                        <li><a href="#Work">Work</a></li>
-                        <li><a href="#Tools">Tools</a></li>
-                        <li><a href="#Contact">Contact</a></li>
+                        <li><a href="#About">Sobre</a></li>
+                        <li><a href="#Portfolio">Portfólio</a></li>
+                        <li><a href="#Tools">Ferramentas</a></li>
+                        <li><a href="#Contact">Contato</a></li>
                         <li><a id="Blog">Blog</a></li>
                     </ul>
                 </nav>
@@ -37,58 +37,103 @@
         
         <main id="main">
             <section id="Home">
-                <h1 id= "HomeTitle" class="fadeInDown">Hi! I'm DevGabrielDeSouza™</h1>
+                <h1 id= "HomeTitle" class="fadeInDown">Oi! Eu sou DevGabrielDeSouza™</h1>
                 <img id="HomePhoto" src="img/avatar.jpg"/>
                 <figcaption id="HomeCaption">So-called as "Gabriel de Souza" and "Biel".</figcaption>
                 <h2 id="HomeText">Hello World!</h2>
             </section>
             
             <section id="About">
-                <h1 id= "AboutTitle" class="fadeInDown">About me...</h1>
-                <div class="AboutBox">
-                    <div class="AboutBubble" id="AboutBubbleLeft">
-                        <img class="AboutImage" src="img/games_code.gif"/>
-                        <div class="bubble"></div>
+                <div id="AboutBG">
+                    
+                    <div id="AboutBG2"></div>
+                    <h1 id= "AboutTitle" class="fadeInDown">Sobre...</h1>
+                    <div class="AboutBox">
+                        <div class="AboutBubble">
+                            <img class="AboutImage" src="img/games_code.gif"/>
+                            <div class="bubble"></div>
+                        </div>
+                        <div id="AboutText1" class="AboutText">
+                            <p>"Sempre fui apaixonado por computação, jogos e arte digital. Amo ajudar as pessoas através da tecnologia."</p>
+                        </div>
                     </div>
-                    <div class="AboutText" id="AboutTextLeft">
-                        <p>"Sempre fui apaixonado por computação, jogos e arte digital. Amo ajudar as pessoas através da tecnologia."</p>
+
+
+                    <div class="AboutBox">
+                        <div class="AboutBubble">
+                            <img class="AboutImage" src="img/globe.gif"/>
+                            <div class="bubble"></div>
+                        </div>
+                        <div id="AboutText2" class="AboutText">
+                            <p>"Contribuo com comunidades e empresas nacionais e internacionais através de projetos tecnológicos."</p>
+                        </div>
                     </div>
-                </div>
-                
-                
-                <div class="AboutBox">
-                    <div class="AboutBubble" id="AboutBubbleRight">
-                        <img class="AboutImage" src="img/globe.gif"/>
-                        <div class="bubble"></div>
+
+
+                    <div class="AboutBox">
+                        <div class="AboutBubble">
+                            <img class="AboutImage" src="img/book.gif"/>
+                            <div class="bubble"></div>
+                        </div>
+                        <div id="AboutText3" class="AboutText">
+                            <p>"Me formei como TÉCNICO DE PROGRAMAÇÃO DE JOGOS DIGITAIS. Agora, curso CIÊNCIA DA COMPUTAÇÃO."</p>
+                        </div>
                     </div>
-                    <div class="AboutText" id="AboutTextRight">
-                        <p>"Contribuo com comunidades e empresas nacionais e internacionais através de projetos tecnológicos."</p>
+
+
+                    <div class="AboutBox">
+                        <div class="AboutBubble">
+                            <img class="AboutImage" src="img/puzzle.gif"/>
+                            <div class="bubble"></div>
+                        </div>
+                        <div id="AboutText4" class="AboutText">
+                            <p>"Procuro parcerias que me ajudem a contribuir com o mundo através da tecnologia, dos jogos e da arte."</p>
+                        </div>
                     </div>
-                </div>
-                
-                
-                <div class="AboutBox">
-                    <div class="AboutBubble" id="AboutBubbleLeft">
-                        <img class="AboutImage" src="img/book.gif"/>
-                        <div class="bubble"></div>
-                    </div>
-                    <div class="AboutText" id="AboutTextLeft">
-                        <p>"Me formei como TÉCNICO DE PROGRAMAÇÃO DE JOGOS DIGITAIS. Agora, curso CIÊNCIA DA COMPUTAÇÃO."</p>
-                    </div>
-                </div>
-                
-                
-                <div class="AboutBox">
-                    <div class="AboutBubble" id="AboutBubbleRight">
-                        <img class="AboutImage" src="img/puzzle.gif"/>
-                        <div class="bubble"></div>
-                    </div>
-                    <div class="AboutText" id="AboutTextRight">
-                        <p>"Procuro parcerias que me ajudem a contribuir com o mundo através da tecnologia, dos jogos e da arte."</p>
-                    </div>
+                    
+                    <p id="CurriculumMessage">Mais detalhes no meu <a id="CurriculumLink" href="http://devgabrieldesouza.github.io">CURRÍCULO</a></p>
+                    
                 </div>
                 
             </section>
+            
+            <section id="Portfolio">
+                <h1 id="PortfolioTitle" class="fadeInDown">Portfólio</h1>
+                <div id="PortfolioBG">
+                    
+                    <div class="PortfolioSpace">
+                        <div class="PortfolioSlide">
+                            <div class="SlideImage GameSlide" id="astrorunnerImg"></div>
+                            <div class="SlideImage GameSlide" id="kakurenboImg"></div>
+                            <div class="SlideImage GameSlide" id="indiegameImg"></div>
+                            <div class="SlideImage GameSlide" id="batatmanImg"></div>
+                        </div>
+                        <h2 class="SpaceTitle">JOGOS</h2>
+                    </div>
+                    
+                    <div class="PortfolioSpace">
+                        <div class="PortfolioSlide">
+                            <div class="SlideImage ArtSlide" id="freelaImg"></div>
+                            <div class="SlideImage ArtSlide" id="girlImg"></div>
+                            <div class="SlideImage ArtSlide" id="astromanImg"></div>
+                            <div class="SlideImage ArtSlide" id="snesImg"></div>
+                        </div>
+                        <h2 class="SpaceTitle">ARTES</h2>
+                    </div>
+                    
+                    <div class="PortfolioSpace">
+                        <div class="PortfolioSlide">
+                            <div class="SlideImage AppSlide" id="binaryImg"></div>
+                            <div class="SlideImage AppSlide" id="matrixImg"></div>
+                            <div class="SlideImage AppSlide" id="funcionarioImg"></div>
+                        </div>
+                        <h2 class="SpaceTitle">APPS</h2>
+                    </div>
+                    
+                </div>
+                
+            </section>
+            
         </main> 
         
         <footer id="Contact">
