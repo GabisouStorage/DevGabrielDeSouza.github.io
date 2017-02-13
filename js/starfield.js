@@ -11,7 +11,7 @@ function Starfield(w,h) {
 	this.height = h;
 	/*this.minVelocity = 15;
 	this.maxVelocity = 30;*/
-	this.minVelocity = Math.random()*30;
+	this.minVelocity = Math.random()*30 + 10;
 	this.maxVelocity = Math.random()*40 + this.minVelocity;	
 	this.stars = 50;
 	this.intervalId = 0;
