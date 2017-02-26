@@ -46,6 +46,7 @@ header {
     font-size: 3.5vmin;
     color: darkgray;
     display: inline-block;
+    /*display: none;*/
     /*background-color: #D53939;*/
     background-color: #be2633;
     /*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
@@ -119,7 +120,7 @@ header {
 
 #Home{
     height: 100vh;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 #Blog{
@@ -137,7 +138,7 @@ p{
 h1{
     /*font-family: 'Archivo Narrow', sans-serif;*/
     font-family: 'Archivo Narrow', sans-serif;
-    font-size: 5vw;
+    font-size: 4.5vmax;
     text-align: center;
 }
 
@@ -148,7 +149,9 @@ h2{
 }
 
 #HomeTitle{
-    margin-top: 80px;
+    margin-top: 0px;
+    padding-top: 85px;
+    margin-bottom: 10px;
     cursor: not-allowed;
 	animation: fadeInDown 1s ease-in-out;
     
@@ -161,11 +164,20 @@ h2{
                                   not supported by any browser */
 }
 
+#Jobs{
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 2vw;
+}
+
 #HomePhoto{
     width: 15vmax;
     height: 15vmax;
     display: block;
     margin: 0 auto;
+    margin-top: 5vh;
     border-radius: 50%;
     border-style:solid;
     border-color: #D59E20;
@@ -186,6 +198,7 @@ h2{
     font-family: 'Rubik Mono One', sans-serif;
     font-size: 0.5vw;
     color: #1d232f;
+    margin-bottom: 0px;
 }
 
 #HomeCaption:hover{
@@ -194,6 +207,26 @@ h2{
 
 #HomeText{
 	animation: fadeInDown 1s ease-in-out;
+    margin-bottom: 2vh;
+    margin-top: 3vh;
+}
+
+#Home ul{
+    text-align: center;
+    margin-bottom: 0px;
+    list-style-type: none;
+    margin-top: 0px;
+    padding: 0;
+    display: block;
+}
+#Home ul li{
+    display: inline-block;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 0px;
+}
+#Home ul li img{
+    margin-bottom: 0px;
 }
 
 
@@ -222,7 +255,6 @@ h2{
 */
 
 #About{
-    margin-top: 100px;
     display: inline-block;
     width: 100%;
     /*background-color: rgb(110, 110, 110);
@@ -291,7 +323,7 @@ h2{
     color: white;
     /*color: rgba(0, 0, 0, 0.6);
     text-shadow: rgb(224, 224, 224) 1px 1px 0px, rgba(255, 255, 255, 0.2) 3px 2px 3px;*/
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 5px;
 }
 
@@ -515,7 +547,7 @@ h2{
     background-image: linear-gradient(#BDBDBD, #757575); /*Standard*/
     
     /*padding-top: 50px;*/
-    margin-top: 50px;
+    margin-top: 90px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23), 0 -5px 10px rgba(0,0,0,0.19), 0 -3px 3px rgba(0,0,0,0.23);
 }
 
@@ -607,6 +639,7 @@ h2{
     width: 100%;
     margin-top: 100px;
     margin-bottom: 100px;
+    padding-top: 80px;
 }
 
 #ExpTitle{
@@ -736,7 +769,7 @@ h2{
     font-size: 1.6vw;
     
     background-color: rgba(255,255,255,0.3);
-    box-shadow: 0 9px 18px rgba(0,0,0,0.16), 0 9px 18px rgba(0,0,0,0.23);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     
 }
 
@@ -796,6 +829,7 @@ CRT
     text-align: center;
     margin-top: 100px;
     margin-bottom: 0px;
+    padding-top: 80px;
     bottom: 0px;
     vertical-align: bottom;
     border: 0px;
@@ -826,6 +860,8 @@ CRT
     border: 5px solid #212121;
     border-radius: 10px;
     box-shadow: 0 0 0 4px #D59E20, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+    position: relative;
+    z-index: 20;
     /*text-shadow: -2px -2px #171c26;*/
 }
 
@@ -835,14 +871,34 @@ CRT
     display:inline-block;
     width: 2%;
     height: 125%;
+    border-radius: 20%;
     background-size: auto;
     background: red; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left, #858A8E , #BBBCBE); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(right, #858A8E, #BBBCBE); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(right, #858A8E, #BBBCBE); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #858A8E , #BBBCBE); /* Standard syntax */
-    z-index: -1;
+    background: linear-gradient(to right, #3E2723 , #795548); /* Standard syntax */
     left: 49%;
+}
+
+
+.poste:after{
+    /*content: "";
+    background: rgba(0,0,0, 0.6);
+    display: block;
+    position : relative;
+    width: 5; 
+    height: 1vw;
+    bottom: -95%;
+    z-index: -3;
+    
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.60);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.60);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.60);
+	
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;*/
 }
 
 #ContactBGTop{
@@ -863,7 +919,7 @@ CRT
     border: 0px;
 }
 
-#ContactBG p{
+#CallMeText{
     font-family: 'Archivo Narrow', sans-serif;
     font-size: 2vw;
     text-align: center;
@@ -883,12 +939,33 @@ CRT
     margin-left: 3vw;
     margin-right: 3vw;
 }
-#ContactBG ul li img{
+
+.SocialImage{
+    z-index: 1;
+    top: 1.5vmax;
+    position: relative;
     width: 4vw;
     height: 4vw;
+    
+    border-radius: 50%;
+    
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor:pointer;
 }
 
+#ass{
+    margin-top: 100px;
+}
 
+#ass2{
+    margin-top: 50px;
+    font-size: 1.8vmin;
+}
+
+#CClink{
+    color: #2A20D5;
+}
 
 
 /*
@@ -933,7 +1010,6 @@ CRT
         display: inline-block;
         color: white;
         text-align: center;
-        width: 10vw;
         height: 50px;
         padding-left: 1vw;
         padding-right: 1vw;
@@ -941,7 +1017,7 @@ CRT
         text-decoration: none;
         padding-top: 16px;
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        margin-left: 1vw;
+        margin-left: 3vw;
         font-size: 1.8vw;
     }
 
@@ -950,6 +1026,15 @@ CRT
         color: #D53939;
         background-color: #ffffff;
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    .SocialImage:hover{
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        top: ;
+    }
+
+    .SocialImage:active{
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
 }
 
@@ -1151,6 +1236,88 @@ CRT
     #CurriculumMessage{
         margin-top: 10px;
         font-size: 5.8vw;
+    }
+    
+    .SocialImage{
+        width: 6vw;
+        height: 6vw;
+    }
+    
+    .PortfolioSpace{
+        display: inline-block;
+        padding: 0px;
+        width: 50vw;
+        height: 50vw;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+    }
+    
+    .PortfolioSlide{
+        display: inline-block;
+        padding: 0px;
+        width: 50vw;
+        height: 50vw;
+    }
+    
+    .SlideImage{
+        width: 50vw;
+        height: 50vw;
+    }
+    
+    .ExpSection{
+        display: inline-block;
+        padding: 0px;
+        width: 50vw;
+        height: auto;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+    }
+    .ExpBubble, .ExpFrontBubble{
+        padding: 0px;
+        width: 40vw;
+        height: 40vw;
+        margin: 0px;
+    }
+    .ExpImage{
+        padding: 0px;
+        width: 32vw;
+        height: 32vw;
+    }
+    
+    .ExpFrontBubble::after {
+        width: 20.5vw; 
+        height: 8.5vw; 
+
+        left:9.2vw;
+        top: 1.2vw;
+    }
+    
+    .ExpText{
+        width: 30vmax;
+        font-size: 3vw;
+        padding: 8px;
+        margin-top: 20px;
+    }
+    
+    .ExpText p{
+        display: inline-block;
+        width: 28vmax;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .SocialImage:active{
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    #Jobs{
+        font-size: 3vw;
+    }
+    
+    #CCallMeText{
+        font-size: 3vw;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     
 }
