@@ -138,6 +138,7 @@ p{
 h1{
     /*font-family: 'Archivo Narrow', sans-serif;*/
     font-family: 'Archivo Narrow', sans-serif;
+    font-size: calc(2.5vw + 2.5vh);
     font-size: 4.5vmax;
     text-align: center;
 }
@@ -170,9 +171,12 @@ h2{
     text-align: center;
     margin-top: 0px;
     font-size: 2vw;
+	animation: fadeInDown 1s ease-in-out;
 }
 
 #HomePhoto{
+    width: calc(12vw + 12vh);
+    height: calc(12vw + 12vh);
     width: 15vmax;
     height: 15vmax;
     display: block;
@@ -435,6 +439,8 @@ h2{
 }*/
 
 .AboutImage{
+    width: 15vw;
+    height: 15vw;
     width: 12vmax;/*3vmax a menos que .bubble*/
     height: 12vmax;
     z-index: 1;
@@ -694,12 +700,14 @@ h2{
     /*margin: 1vmax;*/
     /*cursor: crosshair;*/
     display: inline-block;
+    width: 15vw;
+    height: 15vw;
     width: 15vmax;
     height: 15vmax;
     position: relative;
     text-align: center;
     /*margin: 5vw;*/
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 100%;
     
     
@@ -716,6 +724,8 @@ h2{
 }
 
 .ExpFrontBubble{
+    width:      15vw;
+    height:     15vw;
     width:      15vmax;
     height:     15vmax;
     position:   absolute;
@@ -738,10 +748,14 @@ h2{
 
 .ExpFrontBubble::after {
     content: "";
+    width: 6.5vw; 
+    height: 2.7vw;
     width: 6.5vmax; 
-    height: 2.7vmax; 
+    height: 2.7vmax;
     position: absolute;
     
+    left:4.2vw;
+    top: 0.8vw;
     left:4.2vmax;
     top: 0.8vmax;
     
@@ -750,10 +764,13 @@ h2{
 }
 
 .ExpImage{
+    width: 12vw;
+    height: 12vw;
     width: 12vmax;/*3vmax a menos que .bubble*/
     height: 12vmax;
     z-index: 1;
     top: 1.5vmax;
+    top: 1.5vw;
     position: relative;
 }
 
@@ -761,6 +778,7 @@ h2{
     display: inline-block;
     vertical-align: middle;
     text-align: center;
+    width: 15vw;
     width: 15vmax;
     padding: 12px;
     
@@ -775,6 +793,7 @@ h2{
 
 .ExpText p{
     display: inline-block;
+    width: 12vw;
     width: 12vmax;
     vertical-align: middle;
     text-align: center;
@@ -783,6 +802,8 @@ h2{
 
 .ExpSection{
     display: inline-block;
+    width: 20vw;
+    height: 30vw;
     width: 20vmax;
     height: 30vmax;
     
@@ -920,8 +941,10 @@ CRT
 }
 
 #CallMeText{
+    margin-left: 10px;
+    margin-right: 10px;
     font-family: 'Archivo Narrow', sans-serif;
-    font-size: 2vw;
+    font-size: 2.3vw;
     text-align: center;
     color: #ffffff;
     /*padding-top: 20px;*/
@@ -955,10 +978,15 @@ CRT
 }
 
 #ass{
+    margin-left: 30px;
+    margin-right: 30px;
     margin-top: 100px;
+    font-size: 3vmin;
 }
 
 #ass2{
+    margin-left: 30px;
+    margin-right: 30px;
     margin-top: 50px;
     font-size: 1.8vmin;
 }
@@ -1180,6 +1208,14 @@ CRT
     h2{
         font-size: 6vw;
     }
+    
+    
+    #HomePhoto{
+        width: calc(8vw + 8vh);
+        height: calc(8vw + 8vh);
+        width: 15vmax;
+        height: 15vmax;
+    }
 
     #AboutTitle{
         font-size: 7.5vw;
@@ -1293,6 +1329,7 @@ CRT
     }
     
     .ExpText{
+        width: 30vw;
         width: 30vmax;
         font-size: 3vw;
         padding: 8px;
@@ -1301,6 +1338,7 @@ CRT
     
     .ExpText p{
         display: inline-block;
+        width: 28vw;
         width: 28vmax;
         vertical-align: middle;
         text-align: center;
@@ -1316,6 +1354,20 @@ CRT
     
     #CCallMeText{
         font-size: 3vw;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #CallMeText{
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 2.3vw;
+        text-align: center;
+        color: #ffffff;
+        /*padding-top: 20px;*/
+    }
+    
+    
+    #CallMeText{
+        font-size: 3.5vw;
         padding-left: 10px;
         padding-right: 10px;
     }
