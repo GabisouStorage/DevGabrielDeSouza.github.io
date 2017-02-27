@@ -1213,8 +1213,8 @@ CRT
     #HomePhoto{
         width: calc(8vw + 8vh);
         height: calc(8vw + 8vh);
-        width: 15vmax;
-        height: 15vmax;
+        width: 25vmax;
+        height: 25vmax;
     }
 
     #AboutTitle{
@@ -1275,15 +1275,15 @@ CRT
     }
     
     .SocialImage{
-        width: 6vw;
-        height: 6vw;
+        width: 12vw;
+        height: 12vw;
     }
     
     .PortfolioSpace{
         display: inline-block;
         padding: 0px;
-        width: 50vw;
-        height: 50vw;
+        width: 60vw;
+        height: 60vw;
         margin-bottom: 5vh;
         margin-top: 5vh;
     }
@@ -1291,13 +1291,13 @@ CRT
     .PortfolioSlide{
         display: inline-block;
         padding: 0px;
-        width: 50vw;
-        height: 50vw;
+        width: 60vw;
+        height: 60vw;
     }
     
     .SlideImage{
-        width: 50vw;
-        height: 50vw;
+        width: 60vw;
+        height: 60vw;
     }
     
     .ExpSection{
@@ -1316,6 +1316,7 @@ CRT
     }
     .ExpImage{
         padding: 0px;
+        margin-top: 2vw;
         width: 32vw;
         height: 32vw;
     }
@@ -1329,17 +1330,17 @@ CRT
     }
     
     .ExpText{
-        width: 30vw;
-        width: 30vmax;
-        font-size: 3vw;
+        width: 45vw;
+        width: 45vmax;
+        font-size: 4vw;
         padding: 8px;
         margin-top: 20px;
     }
     
     .ExpText p{
         display: inline-block;
-        width: 28vw;
-        width: 28vmax;
+        width: 40vw;
+        width: 40vmax;
         vertical-align: middle;
         text-align: center;
     }
