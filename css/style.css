@@ -1301,9 +1301,10 @@ CRT
     }
     
     .ExpSection{
+        text-align: center;
         display: inline-block;
         padding: 0px;
-        width: 50vw;
+        width: 60vw;
         height: auto;
         margin-bottom: 5vh;
         margin-top: 5vh;
@@ -1330,8 +1331,9 @@ CRT
     }
     
     .ExpText{
-        width: 45vw;
-        width: 45vmax;
+        text-align: center;
+        width: 100%;
+        width: 100%;
         font-size: 4vw;
         padding: 8px;
         margin-top: 20px;
@@ -1339,8 +1341,8 @@ CRT
     
     .ExpText p{
         display: inline-block;
-        width: 40vw;
-        width: 40vmax;
+        width: 100%;
+        width: 100%;
         vertical-align: middle;
         text-align: center;
     }
