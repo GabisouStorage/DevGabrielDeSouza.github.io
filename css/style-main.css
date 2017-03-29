@@ -119,8 +119,8 @@ header {
 }
 
 #Home{
-    height: 100vh;
-    margin-bottom: 30px;
+    /*height: 100vh;*/
+    margin-bottom: 5vh;
 }
 
 #Blog{
@@ -150,7 +150,7 @@ h2{
 }
 
 #HomeTitle{
-    margin-top: 0px;
+    margin-top: 3vh;
     padding-top: 85px;
     margin-bottom: 10px;
     cursor: not-allowed;
@@ -190,8 +190,8 @@ h2{
 #HomePhoto{
     width: calc(12vw + 12vh);
     height: calc(12vw + 12vh);
-    width: 15vmax;
-    height: 15vmax;
+    width: 30vmin;
+    height: 30vmin;
     display: block;
     margin: 0 auto;
     margin-top: 5vh;
@@ -201,7 +201,7 @@ h2{
     border-width: 1vmin;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     -webkit-transition: -webkit-transform .8s ease-in-out;
-        transition:     transform .8s ease-in-out;
+    transition:     transform .8s ease-in-out;
 	animation: fadeIn 1.5s ease-in-out;
 }
 #HomePhoto:hover{
@@ -277,7 +277,8 @@ h2{
     /*background-color: rgb(110, 110, 110);
     box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23), 0 -5px 10px rgba(0,0,0,0.19), 0 -3px 3px rgba(0,0,0,0.23);*/
     padding: 0px;
-    margin-bottom: 100px;
+    margin-top: 5vh;
+    margin-bottom: 6vh;
     text-align: center;
     
     /*background: rgba(0,59,111,1);*/
@@ -524,7 +525,7 @@ h2{
     /*color: #FF5656;*/
     display: inline-block;
     padding-top: 1vmax;
-    width: 16vw;
+    width: 20vw;
     height: 4vmax;
     color: #FFFFFF;
     font-weight: bolder;
@@ -554,8 +555,8 @@ h2{
     display: inline-block;
     text-align: center;
     width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 6vh;
+    margin-bottom:  6vh;
     
 }
 #PortfolioTitle{
@@ -686,8 +687,8 @@ h2{
 #Experience{
     display: inline-block;
     width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
     padding-top: 80px;
 }
 
@@ -856,7 +857,13 @@ h2{
     margin-right: 5vw;
 }
 
-
+#EmailLink{
+    white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
 
 /*#clouds{
     -webkit-filter: drop-shadow(50px 50px 5px #FFFFFF);
@@ -891,7 +898,7 @@ CRT
 
 #Contact{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10vh;
     margin-bottom: 0px;
     padding-top: 80px;
     bottom: 0px;
@@ -1010,8 +1017,8 @@ CRT
     z-index: 1;
     top: 1.5vmax;
     position: relative;
-    width: 4vw;
-    height: 4vw;
+    width: 50px;
+    height: 50px;
     
     border-radius: 50%;
     
@@ -1323,8 +1330,8 @@ CRT
     }
     
     .SocialImage{
-        width: 12vw;
-        height: 12vw;
+        width: 10vw;
+        height: 10vw;
     }
     
     .PortfolioSpace{
@@ -1432,7 +1439,7 @@ CRT
         margin-bottom: 80px;
         font-size: 7vmax;
         padding-top: 1vmax;
-        width: 37vw;
+        width: 70vw;
         height: 8vmax;
         text-shadow: 2px 2px 10px #000000;
     }
@@ -1446,5 +1453,10 @@ CRT
     }
     #NavBar ul li a {
         font-size: 30px;
+    }
+
+    .SocialImage{
+        width: 4.5vmax;
+        height: 4.5vmax;
     }
 }
