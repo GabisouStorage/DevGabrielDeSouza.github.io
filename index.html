@@ -11,30 +11,32 @@
         
         <!--<script src="js/input.js"></script>-->
         
-    </head>
+	</head>
+
+	<img id="test" src="img/frame.png" style="display: none;">
     
     <body onresize="resize()">
         <div id="wrapper">
             <header id="header">
                 <div class="container">
-                    <a href="#Home"><h1 id="TopTitle">Gabriel de Souza</h1></a>
+                    <a href="#Home" onclick="MenuButtonClick()"><h1 id="TopTitle">Gabriel de Souza</h1></a>
 
                     <h1 id="MenuButton" onclick="MenuButtonClick()">☰</h1>
 
                     <nav id="NavBar">
                         <ul>
-                            <li><a href="#About">Sobre</a></li>
-                            <li><a href="#Portfolio">Portfólio</a></li>
-                            <li><a href="#Experience">Experiência</a></li>
-                            <li><a href="#Contact">Contato</a></li>
-                            <li><a id="Blog">Blog</a></li>
+                            <li><a href="#About" onclick="MenuButtonClick()">Sobre</a></li>
+                            <li><a href="#Portfolio" onclick="MenuButtonClick()">Portfólio</a></li>
+                            <li><a href="#Experience" onclick="MenuButtonClick()">Experiência</a></li>
+                            <li><a href="#Contact" onclick="MenuButtonClick()">Contato</a></li>
+                            <li><a id="Blog" onclick="MenuButtonClick()">Blog</a></li>
                         </ul>
                     </nav>
                 </div>
             </header>
 
             <!-- The main starfield container, fills the entire screen. -->
-            <div class="starfield" id="starfield"></div>
+            <div class="starfield" id="starfield" ></div>
 
             <main id="main">
                 <section id="Home">
@@ -42,7 +44,7 @@
                     <h3 id ="Jobs" class="fadeInDown">| <a id ="prog" >Programador</a> | <a id ="gmde" >Game Designer</a> | <a id ="artdi" >Artista Digital</a> |</h3>
                     <img id="HomePhoto" src="img/avatar.jpg"/>
                     <figcaption id="HomeCaption">So-called as "Gabriel de Souza" and "Biel".</figcaption>
-                    <h2 id="HomeText">Hello World!</h2>
+                    <h2 id="HomeText"><q>Hello World!</q></h2>
                     
                     <ul id="SocialInMenu">
                         <li><a href="https://www.facebook.com/mrgabrieldesouza"><img class="SocialImage" src="img/social/facebook.png"/></a></li>
@@ -63,7 +65,7 @@
                                 <div class="bubble"></div>
                             </div>
                             <div id="AboutText1" class="AboutText">
-                                <p>"Sempre fui apaixonado por computação, jogos e arte digital. Amo ajudar as pessoas através da tecnologia."</p>
+                                <p><q>Sempre fui apaixonado por computação, jogos e arte digital. Amo ajudar as pessoas através da tecnologia.</q></p>
                             </div>
                         </div>
 
@@ -74,7 +76,7 @@
                                 <div class="bubble"></div>
                             </div>
                             <div id="AboutText2" class="AboutText">
-                                <p>"Contribuo com comunidades e empresas nacionais e internacionais através de projetos tecnológicos."</p>
+                                <p><q>Contribuo com comunidades e empresas nacionais e internacionais através de projetos tecnológicos.</q></p>
                             </div>
                         </div>
 
@@ -85,7 +87,7 @@
                                 <div class="bubble"></div>
                             </div>
                             <div id="AboutText3" class="AboutText">
-                                <p>"Me formei como TÉCNICO DE PROGRAMAÇÃO DE JOGOS DIGITAIS. Agora, curso CIÊNCIA DA COMPUTAÇÃO."</p>
+                                <p><q>Me formei como TÉCNICO DE PROGRAMAÇÃO DE JOGOS DIGITAIS. Agora, curso CIÊNCIA DA COMPUTAÇÃO.</q></p>
                             </div>
                         </div>
 
@@ -96,7 +98,7 @@
                                 <div class="bubble"></div>
                             </div>
                             <div id="AboutText4" class="AboutText">
-                                <p>"Procuro parcerias que me ajudem a contribuir com o mundo através da tecnologia, dos jogos e da arte."</p>
+                                <p><q>Procuro parcerias que me ajudem a contribuir com o mundo através da tecnologia, dos jogos e da arte.</q></p>
                             </div>
                         </div>
 
@@ -212,7 +214,18 @@
                         <li><a href="https://plus.google.com/u/0/115785162995076632702"><img class="SocialImage" src="img/social/google-plus.png"/></a> </li>
                     </ul>
                     
-                    <a id="CurriculumLink2" href="resume.html">CURRÍCULO</a>
+					<a id="CurriculumLink2" href="resume.html">CURRÍCULO</a>
+					
+					<table style="margin: auto;">
+						<tr>
+							<th>E-mail:</th>
+							<td>contatogabrieldesouza@gmail.com</td>
+						</tr>
+						<tr>
+							<th>Telefone:</th>
+							<td>+55 (21) 96552-4492</td>
+						</tr>
+					</table>
                     
                     <div id="assin">
                         <p>Gabriel de Souza Ⓒ 2017 | Feito com ♥ e ★ por Gabriel de Souza.<br>Todos os direitos e esquerdos resrevados.</p>
@@ -228,6 +241,13 @@
         </div>
         <script src="js/starfield.js"></script>
         <script src="js/main_behaviour-main.js"></script>
-    </body>
+		
+		<div id="music_player">
+			<p onclick="playButton()" id="MusicButton">⏯</p>
+			<p onclick="nextAudio()" id="MusicButton">⏭</p>
+			<p onclick="changeAudio()" id="MusicButton">🍀</p>
+		</div>
+	
+	</body>
     
 </html>
