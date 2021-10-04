@@ -2,114 +2,18 @@
 //element.parentNode.removeChild(menuMobile);
 //console.log("hOI!");
 
-let menuMobile;
+var menuMobile;
 
-let menuButtonPosition;
-
-
-let audios = [];
-
-audios.push(new Audio('audio/spaceJunk.mp3'));
-audios.push(new Audio('audio/moonTheme.mp3'));
-audios.push(new Audio('audio/direDocks.mp3'));
-audios.push(new Audio('audio/aquaticAmbience.mp3'));
-audios.push(new Audio('audio/starLight.mp3'));
-
-
-for(i in audios){
-	audios[i].load();
-	audios[i].loop = true;
-}
-
-
-let audioAmount = audios.length;
-
-let selectAudio = Math.floor(Math.random() * audioAmount);
-
-
-console.log("Selecao: " + selectAudio);
-
-let audio = new Audio('audio/spaceJunk.mp3');
-
-
-//audio.src = 'audio/direDocks.mp3';
-audio.load();
-
-playAudio();
-
-
-function playAudio() {
-	let playPromise = audios[selectAudio].play();
-
-	if (playPromise !== undefined) {
-		playPromise.then(_ => {
-			// Automatic playback started!
-			// Show playing UI.
-		})
-			.catch(error => {
-				alert("Reprodução automática indisponível! Inicie a música no player!");
-			});
-	}
-}
-
-
-function pauseAudio() {
-	let playPromise = audios[selectAudio].pause();
-
-	if (playPromise !== undefined) {
-		playPromise.then(_ => {
-			// Automatic playback started!
-			// Show playing UI.
-		})
-			.catch(error => {
-				alert("Interrupção indisponível! Inicie a música no player!");
-			});
-	}
-}
-
-function changeAudio() {
-	audios[selectAudio].pause();
-	audios[selectAudio].currentTime = 0;
-	let valorAleatorio = Math.floor(Math.random() * (audioAmount-1)) + 1;
-	selectAudio = (selectAudio + valorAleatorio) % audioAmount;
-	console.log("Valor aleatorio:" + valorAleatorio + "\nNova Seleção:" + selectAudio);
-	playAudio();
-}
-
-function nextAudio() {
-	pauseAudio();
-	audios[selectAudio].currentTime = 0;
-	selectAudio = (selectAudio+1) % audioAmount;
-	console.log(selectAudio);
-	playAudio();
-}
+var menuButtonPosition;
 
 window.onload = function () {
     menuMobile = document.getElementById("NavBar");
     
     menuMobile.style.transition = "none";
     
-	menuButtonPosition = menuMobile.style.right;
-	//audio = new Audio('audio/spaceJunk.mp3');
-
+    menuButtonPosition = menuMobile.style.right;
     
 };
-
-window.open = function () {
-	console.log("done");
-}; 
-
-
-function playButton() {
-	if (!audios[selectAudio].paused) {
-		pauseAudio();
-
-	}else{
-		pauseAudio();
-		playAudio();
-		audios[selectAudio].loop = true;
-	}
-}
 
 function MenuButtonClick(){
     menuButtonPosition = menuMobile.style.right
@@ -137,33 +41,35 @@ function resize(){
         menuMobile.style.transition = "none";
         menuButtonPosition = menuMobile.style.right = "2%";
     }
+    //randomise();
 }
 
-let slidesNames = [["GameSlide", 0],["ArtSlide",0],["AppSlide",0]];
+var slidesNames = [["GameSlide", 0],["ArtSlide",0],["AppSlide",0]];
 
-let myIndex = 0;
+var myIndex = 0;
 
 carousel();
 
 
 function carousel(slides) {
-    let i;
+    var i;
     
-    let slide = [];
-    for(let i=0; i< slidesNames.length; i++) {
+    var slide = [];
+    for(var i=0; i< slidesNames.length; i++) {
         
-        let j;
+        var j;
         
         slide[i] = document.getElementsByClassName(slidesNames[i][0]);
         
         for (j = 0; j < slide[i].length; j++) {
             slide[i][j].style.display = "none";
+            //console.log(slide[i][j]);
         }
         
         slidesNames[i][1]++;
         
         if (slidesNames[i][1] > slide[i].length) {
-            slidesNames[i][1] = 1;
+            slidesNames[i][1] = 1
         }
         
         slide[i][slidesNames[i][1]-1].style.display = "block"; 
@@ -171,3 +77,51 @@ function carousel(slides) {
     
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
+
+/*
+function carousel(slides) {
+    var i;
+    
+    var slide = [];
+    for(var i=0; i< slidesNames.length; i++) {
+        
+        var j;
+        
+        slide[i] = document.getElementsByClassName(slidesNames[i]);
+        
+        for (j = 0; j < slide[i].length; j++) {
+            slide[i][j].style.display = "none";
+            //console.log(slide[i][j]);
+        }
+        
+        myIndex++;
+        
+        if (myIndex > slide[i].length) {
+            myIndex = 1
+        }
+        
+        slide[i][myIndex-1].style.display = "block"; 
+    }
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+*/
+
+/*
+function carousel(slides) {
+    var i;
+    var x = document.getElementsByClassName("GameSlide");
+    
+    var slide = [];
+    for(var i=0; i< slidesNames.length; i++) {
+        slide[i] = document.getElementsByClassName("GameSlide");
+    }
+    
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+*/

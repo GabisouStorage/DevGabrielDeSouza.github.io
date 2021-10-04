@@ -3,8 +3,6 @@
 
 */
 
-//let last_height;
-
 //	Define the starfield class.
 function Starfield(w,h) {
 	this.fps = 60;
@@ -15,16 +13,13 @@ function Starfield(w,h) {
 	this.maxVelocity = 30;*/
 	this.minVelocity = Math.random()*30 + 10;
 	this.maxVelocity = Math.random()*40 + this.minVelocity;	
-	this.stars = 100;
+	this.stars = 50;
 	this.intervalId = 0;
-
-	this.last_width = w;
-	this.last_height = h;
 }
 
 //	The main function - initialises the starfield.
 Starfield.prototype.initialise = function(div) {
-	let self = this;
+	var self = this;
 
 	//	Store the div.
 	this.containerDiv = div;
@@ -40,7 +35,7 @@ Starfield.prototype.initialise = function(div) {
 	});
 
 	//	Create the canvas.
-	let canvas = document.createElement('canvas');
+	var canvas = document.createElement('canvas');
 	div.appendChild(canvas);
 	this.canvas = canvas;
 	this.canvas.width = this.width;
@@ -50,14 +45,14 @@ Starfield.prototype.initialise = function(div) {
 Starfield.prototype.start = function() {
 
 	//	Create the stars.
-	let stars = [];
-	for(let i=0; i<this.stars; i++) {
+	var stars = [];
+	for(var i=0; i<this.stars; i++) {
 		stars[i] = new Star(Math.random()*this.width, Math.random()*this.height, Math.random()*1+1,
 		 (Math.random()*(this.maxVelocity - this.minVelocity))+this.minVelocity);
 	}
 	this.stars = stars;
 
-	let self = this;
+	var self = this;
 	//	Start the timer.
 	this.intervalId = setInterval(function() {
 		self.update();
@@ -70,12 +65,27 @@ Starfield.prototype.stop = function() {
 };
 
 Starfield.prototype.update = function() {
-	let dt = 1 / this.fps;
+	var dt = 1 / this.fps;
     
-	for(let i=0; i<this.stars.length; i++) {
-		let star = this.stars[i];
+	for(var i=0; i<this.stars.length; i++) {
+		var star = this.stars[i];
 		star.x -= dt * star.velocity;
         
+        /*if(star.opacity > 1){
+            star.opacity = 1;
+        }else if(star.opacity == 1){
+            star.increase *= -1;
+        }else if(star.opacity < 0){
+            star.opacity = 0;
+        }else if(star.opacity == 0){
+            star.increase *= -1;
+        }*/
+
+        //star.opacity += dt * star.increase;
+        
+        //star.opacity -= (Math.random() * dt) / 8;
+        
+		//	If the star has moved from the bottom of the screen, spawn it at the top.
 		if(star.x < 0) {
 			this.stars[i] = new Star(this.width, Math.random()*this.height, Math.random()*1+1, 
 		 	(Math.random()*(this.maxVelocity - this.minVelocity))+this.minVelocity);
@@ -85,19 +95,31 @@ Starfield.prototype.update = function() {
 
 Starfield.prototype.draw = function() {
 
-	let ctx = this.canvas.getContext("2d");
+	//	Get the drawing context.
+	var ctx = this.canvas.getContext("2d");
 
+	//	Draw the background.
+ 	//ctx.fillStyle = '#000000';
+	//ctx.fillRect(0, 0, this.width, this.height);
+    
+    //ctx.save();
+    
+	//Clear the canvas
 	ctx.clearRect(0, 0, this.width, this.height);
 
-
+    
+	//	Draw stars.
+	//ctx.fillStyle = '#ffffff';
     ctx.fillStyle = "rgba(255,255,255, 0.6)";
-	for(let i=0; i<this.stars.length;i++) {
-		let star = this.stars[i];
+	for(var i=0; i<this.stars.length;i++) {
+		var star = this.stars[i];
+        
+        //Apply opacity
+        //ctx.globalAlpha = (star.opacity) / 1;
+        
 		ctx.fillRect(star.x, star.y, star.size, star.size);
 	}
-
-	// let img = document.getElementById("test");
-	// ctx.drawImage(img, 0, 0, this.width, this.height);
+    //ctx.restore();
 };
 
 function Star(x, y, size, velocity) {
@@ -105,16 +127,18 @@ function Star(x, y, size, velocity) {
 	this.y = y; 
 	this.size = size;
 	this.velocity = velocity;
+    //this.opacity = Math.random();
+    //this.increase = 0.1;
 }
 
-let container = document.getElementById('starfield');
-let starfield = new Starfield(container.offsetWidth, container.offsetHeight);
+var container = document.getElementById('starfield');
+var starfield = new Starfield(container.offsetWidth, container.offsetHeight);
 starfield.initialise(container);
 starfield.start();
 
 function randomise() {
 	starfield.stop();
-	starfield.stars = 100;
+	starfield.stars = 50;
 	starfield.minVelocity = Math.random()*30;
 	starfield.maxVelocity = Math.random()*40 + starfield.minVelocity;			
 	starfield.start();
@@ -123,15 +147,5 @@ function randomise() {
 
 
 window.addEventListener('resize', function resize(event) {
-	let div = starfield.containerDiv;
-
-	let new_width = div.offsetWidth;
-	let new_height = div.offsetHeight;
-
-	if ((new_width > starfield.last_width * 1.1 || new_width < starfield.last_width * 0.8 || new_height > starfield.last_height * 1.1 || new_height < starfield.last_height * 0.8) || (Math.abs(new_width - starfield.last_width) > 200) || (Math.abs(new_height - starfield.last_height)> 200)) {
-		randomise();
-		this.console.log("Novo: " + new_width + "\nAntigo: " + div.offsetWidth);
-		starfield.last_width = div.offsetWidth;
-		starfield.last_height = div.offsetHeight;
-	}
+    randomise();
 });
