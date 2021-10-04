@@ -105,8 +105,8 @@ header {
 }
 
 #Home{
-    height: 100vh;
-    margin-bottom: 30px;
+    /*height: 100vh;*/
+    margin-bottom: 0px;
     text-align: center;
 }
 
@@ -179,12 +179,13 @@ h2{
     text-decoration: none;
     margin-left: 8vw;
     margin-right: 8vw;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 #ResumeCaption{
     margin-top: -20px;
     margin-bottom: 30px;
-    font-size: 1.6vmax;
+    font-size: 2vmax;
     text-decoration: none;
     font-family: 'Anonymous Pro', monospace;
     font-weight: bolder;
@@ -194,12 +195,12 @@ h2{
 #ResumeIcon{
     width: calc(12vw + 12vh);
     height: calc(12vw + 12vh);
-    width: 15vmax;
-    height: 15vmax;
+    width: 30vmin;
+    height: 30vmin ;
     display: inline-block;
     margin: 0 auto;
     margin-top: 5vh;
-    margin: 5vh;
+    margin-bottom: 5vh;
     text-align: center;
     border-radius: 10%;
     background-color: rgba(0,145,234, 0.3);
@@ -264,7 +265,7 @@ h2{
     /*color: #FF5656;*/
     display: inline-block;
     padding-top: 1vmax;
-    width: 8vw;
+    width: 10vw;
     height: 4vmax;
     color: #FFFFFF;
     font-weight: bolder;
@@ -294,7 +295,7 @@ h2{
 
 #Contact{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10vh;
     margin-bottom: 0px;
     padding-top: 80px;
     bottom: 0px;
@@ -393,8 +394,8 @@ h2{
     z-index: 1;
     top: 1.5vmax;
     position: relative;
-    width: 4vw;
-    height: 4vw;
+    width: 50px;
+    height: 50px;
     
     border-radius: 50%;
     
@@ -423,6 +424,14 @@ h2{
 
 #ORDEM{
     color: #5CA14A;
+}
+
+#EmailLink{
+    white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 /*
@@ -494,6 +503,14 @@ h2{
 
     .SocialImage:active{
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    
+    
+
+    #ResumeSpace:hover{
+        -ms-transform: scale(1.1, 1.1); /* IE 9 */
+        -webkit-transform: scale(1.1, 1.1); /* Safari */
+        transform: scale(1.1, 1.1);
     }
 }
 
@@ -706,8 +723,8 @@ h2{
     }
     
     .SocialImage{
-        width: 12vw;
-        height: 12vw;
+        width: 10vw;
+        height: 10vw;
     }
     
     .PortfolioSpace{
@@ -812,7 +829,7 @@ h2{
     
     #CurriculumLink2{
         padding-top: 1vmax;
-        width: 20vw;
+        width: 40vw;
         height: 9vmax;
         margin-top: 60px;
         margin-bottom: 80px;
@@ -827,5 +844,10 @@ h2{
     }
     #NavBar ul li a {
         font-size: 30px;
+    }
+
+    .SocialImage{
+        width: 4.5vmax;
+        height: 4.5vmax;
     }
 }
